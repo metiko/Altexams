@@ -1,0 +1,10 @@
+---
+db_user: "temi"
+db_pass: "12345"
+db_name: "metiko"
+mysql_root_password: "12345"
+app_user: "ubuntu"
+http_host: "tmetiko"
+http_conf: "tmetiko.conf"
+http_port: "80"
+disable_default: true

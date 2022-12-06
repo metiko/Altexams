@@ -1,0 +1,656 @@
+2022-11-25 22:29:19,028 p=3749 u=ubuntu n=ansible | ERROR! this task 'ansible.builtin.shell' has extra params, which is only allowed in the following modules: win_shell, meta, import_role, win_command, script, import_tasks, include_tasks, raw, shell, include_vars, include, command, add_host, include_role, group_by, set_fact
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 171, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Change the project directory and install Composer
+      ^ here
+
+2022-11-26 18:26:26,775 p=11712 u=ubuntu n=ansible | ERROR! this task 'ansible.builtin.shell' has extra params, which is only allowed in the following modules: shell, add_host, include_vars, win_command, script, raw, import_tasks, include, include_role, import_role, meta, include_tasks, group_by, win_shell, set_fact, command
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 171, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Change the project directory and install Composer
+      ^ here
+
+2022-11-26 18:46:46,836 p=11889 u=ubuntu n=ansible | ERROR! this task 'ansible.builtin.shell' has extra params, which is only allowed in the following modules: shell, command, include, import_tasks, raw, group_by, add_host, include_tasks, set_fact, import_role, meta, win_command, win_shell, include_role, include_vars, script
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 171, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Change the project directory and install Composer
+      ^ here
+
+2022-11-26 18:48:29,325 p=11895 u=ubuntu n=ansible | ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 173, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      ansible.builtin.shell: curl -sS https://getcomposer.org/installer | php
+        args:
+            ^ here
+
+2022-11-26 18:50:15,871 p=11902 u=ubuntu n=ansible | ERROR! this task 'ansible.builtin.shell' has extra params, which is only allowed in the following modules: command, meta, add_host, raw, include_vars, import_tasks, group_by, win_shell, shell, include, win_command, include_role, import_role, include_tasks, set_fact, script
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 171, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Change the project directory and install Composer
+      ^ here
+
+2022-11-26 18:57:27,053 p=11917 u=ubuntu n=ansible | ERROR! this task 'ansible.builtin.script' has extra params, which is only allowed in the following modules: command, include_tasks, win_command, import_tasks, shell, group_by, meta, set_fact, raw, script, add_host, include, include_role, import_role, win_shell, include_vars
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 281, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: Script to install PostgreSQL
+      ^ here
+
+2022-11-26 19:13:48,972 p=14603 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 19:13:48,996 p=14603 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 19:13:51,579 p=14603 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:13:51,606 p=14603 u=ubuntu n=ansible | TASK [Install prerequisites] ************************************************************************************************************************
+2022-11-26 19:13:57,348 p=14603 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=aptitude)
+2022-11-26 19:13:57,364 p=14603 u=ubuntu n=ansible | TASK [Install latest version of Apache] *************************************************************************************************************
+2022-11-26 19:13:59,310 p=14603 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:13:59,326 p=14603 u=ubuntu n=ansible | TASK [Change file ownership, group and permissions] *************************************************************************************************
+2022-11-26 19:13:59,802 p=14603 u=ubuntu n=ansible | fatal: [44.201.208.101]: FAILED! => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "msg": "chown failed: failed to look up user temi", "owner": "root", "path": "/var/www/html/tmetiko", "size": 4096, "state": "directory", "uid": 0}
+2022-11-26 19:13:59,805 p=14603 u=ubuntu n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2022-11-26 19:13:59,805 p=14603 u=ubuntu n=ansible | 44.201.208.101             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-11-26 19:27:16,309 p=14680 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 19:27:16,323 p=14680 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 19:27:18,459 p=14680 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:27:18,487 p=14680 u=ubuntu n=ansible | TASK [Install prerequisites] ************************************************************************************************************************
+2022-11-26 19:27:20,661 p=14680 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=aptitude)
+2022-11-26 19:27:20,677 p=14680 u=ubuntu n=ansible | TASK [Install latest version of Apache] *************************************************************************************************************
+2022-11-26 19:27:22,524 p=14680 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:27:22,540 p=14680 u=ubuntu n=ansible | TASK [Change file ownership, group and permissions] *************************************************************************************************
+2022-11-26 19:27:23,017 p=14680 u=ubuntu n=ansible | fatal: [44.201.208.101]: FAILED! => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "msg": "chown failed: failed to look up user temi", "owner": "root", "path": "/var/www/html/tmetiko", "size": 4096, "state": "directory", "uid": 0}
+2022-11-26 19:27:23,021 p=14680 u=ubuntu n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2022-11-26 19:27:23,022 p=14680 u=ubuntu n=ansible | 44.201.208.101             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-11-26 19:34:31,074 p=14737 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 19:34:31,089 p=14737 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 19:34:33,083 p=14737 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:34:33,112 p=14737 u=ubuntu n=ansible | TASK [Install prerequisites] ************************************************************************************************************************
+2022-11-26 19:34:35,240 p=14737 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=aptitude)
+2022-11-26 19:34:35,255 p=14737 u=ubuntu n=ansible | TASK [Install latest version of Apache] *************************************************************************************************************
+2022-11-26 19:34:37,099 p=14737 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 19:34:37,114 p=14737 u=ubuntu n=ansible | TASK [Change file ownership, group and permissions] *************************************************************************************************
+2022-11-26 19:34:37,589 p=14737 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 19:34:37,608 p=14737 u=ubuntu n=ansible | TASK [Copy index file] ******************************************************************************************************************************
+2022-11-26 19:34:38,517 p=14737 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 19:34:38,533 p=14737 u=ubuntu n=ansible | TASK [Set up Apache virtualhost] ********************************************************************************************************************
+2022-11-26 19:34:38,627 p=14737 u=ubuntu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2022-11-26 19:34:38,628 p=14737 u=ubuntu n=ansible | fatal: [44.201.208.101]: FAILED! => {"changed": false, "msg": "Could not find or access 'j2files/apache.conf.j2'\nSearched in:\n\t/home/ubuntu/at/templates/j2files/apache.conf.j2\n\t/home/ubuntu/at/j2files/apache.conf.j2\n\t/home/ubuntu/at/templates/j2files/apache.conf.j2\n\t/home/ubuntu/at/j2files/apache.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2022-11-26 19:34:38,631 p=14737 u=ubuntu n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2022-11-26 19:34:38,632 p=14737 u=ubuntu n=ansible | 44.201.208.101             : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-11-26 20:23:46,955 p=15133 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 20:23:46,970 p=15133 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:23:49,042 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:23:49,069 p=15133 u=ubuntu n=ansible | TASK [Install prerequisites] ************************************************************************************************************************
+2022-11-26 20:23:55,369 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=aptitude)
+2022-11-26 20:23:55,386 p=15133 u=ubuntu n=ansible | TASK [Install latest version of Apache] *************************************************************************************************************
+2022-11-26 20:23:57,312 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:23:57,328 p=15133 u=ubuntu n=ansible | TASK [Change file ownership, group and permissions] *************************************************************************************************
+2022-11-26 20:23:57,806 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:23:57,822 p=15133 u=ubuntu n=ansible | TASK [Copy index file] ******************************************************************************************************************************
+2022-11-26 20:23:58,582 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:23:58,598 p=15133 u=ubuntu n=ansible | TASK [Set up Apache virtualhost] ********************************************************************************************************************
+2022-11-26 20:23:59,338 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:23:59,355 p=15133 u=ubuntu n=ansible | TASK [Enable new site] ******************************************************************************************************************************
+2022-11-26 20:23:59,883 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:23:59,899 p=15133 u=ubuntu n=ansible | TASK [Disable default Apache site] ******************************************************************************************************************
+2022-11-26 20:24:00,283 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:24:00,299 p=15133 u=ubuntu n=ansible | RUNNING HANDLER [Reload Apache] *********************************************************************************************************************
+2022-11-26 20:24:01,201 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:24:01,222 p=15133 u=ubuntu n=ansible | PLAY [instal Mysql& git] ****************************************************************************************************************************
+2022-11-26 20:24:01,236 p=15133 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:24:02,317 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:24:02,346 p=15133 u=ubuntu n=ansible | TASK [Installing Mysql  and dependencies] ***********************************************************************************************************
+2022-11-26 20:24:41,610 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101] => (item=mysql-server)
+2022-11-26 20:24:49,151 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101] => (item=mysql-client)
+2022-11-26 20:24:55,787 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101] => (item=python3-mysqldb)
+2022-11-26 20:25:15,522 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101] => (item=libmysqlclient-dev)
+2022-11-26 20:25:15,541 p=15133 u=ubuntu n=ansible | TASK [start and enable mysql service] ***************************************************************************************************************
+2022-11-26 20:25:16,149 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:25:16,165 p=15133 u=ubuntu n=ansible | TASK [creating mysql user (temi)] *******************************************************************************************************************
+2022-11-26 20:25:17,027 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:17,044 p=15133 u=ubuntu n=ansible | TASK [creating metiko_db] ***************************************************************************************************************************
+2022-11-26 20:25:17,575 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:17,591 p=15133 u=ubuntu n=ansible | TASK [Enable remote login to mysql] *****************************************************************************************************************
+2022-11-26 20:25:18,108 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:18,125 p=15133 u=ubuntu n=ansible | RUNNING HANDLER [Restart mysql] *********************************************************************************************************************
+2022-11-26 20:25:21,627 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:21,645 p=15133 u=ubuntu n=ansible | PLAY [PHP & other denpendencies] ********************************************************************************************************************
+2022-11-26 20:25:21,658 p=15133 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:25:22,994 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:25:23,020 p=15133 u=ubuntu n=ansible | TASK [Install git & others] *************************************************************************************************************************
+2022-11-26 20:25:29,987 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:30,002 p=15133 u=ubuntu n=ansible | TASK [Install Software properties] ******************************************************************************************************************
+2022-11-26 20:25:30,986 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:31,000 p=15133 u=ubuntu n=ansible | TASK [Add Apt Repo for PHP] *************************************************************************************************************************
+2022-11-26 20:25:40,190 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:40,205 p=15133 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:25:42,244 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:25:42,260 p=15133 u=ubuntu n=ansible | TASK [Install PHP] **********************************************************************************************************************************
+2022-11-26 20:26:06,307 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:26:06,322 p=15133 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:26:08,251 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:26:08,267 p=15133 u=ubuntu n=ansible | TASK [Install PHP 8.1 and it's libraries] ***********************************************************************************************************
+2022-11-26 20:27:02,513 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:27:02,528 p=15133 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:27:04,645 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:27:04,675 p=15133 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 20:27:04,689 p=15133 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:27:05,811 p=15133 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:27:05,839 p=15133 u=ubuntu n=ansible | TASK [Change the project directory and install Composer] ********************************************************************************************
+2022-11-26 20:27:06,988 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:27:07,004 p=15133 u=ubuntu n=ansible | TASK [Make composer executable by user] *************************************************************************************************************
+2022-11-26 20:27:07,328 p=15133 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:27:07,344 p=15133 u=ubuntu n=ansible | TASK [Clone laravel & run composer] *****************************************************************************************************************
+2022-11-26 20:27:08,322 p=15133 u=ubuntu n=ansible | fatal: [44.201.208.101]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin https://github.com/laravel/laravel.git /var/www/html/tmetiko", "msg": "fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory.", "rc": 128, "stderr": "fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory.\n", "stderr_lines": ["fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory."], "stdout": "", "stdout_lines": []}
+2022-11-26 20:27:08,324 p=15133 u=ubuntu n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2022-11-26 20:27:08,324 p=15133 u=ubuntu n=ansible | 44.201.208.101             : ok=28   changed=20   unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-11-26 20:54:30,037 p=16045 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 20:54:30,051 p=16045 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:54:32,135 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:32,163 p=16045 u=ubuntu n=ansible | TASK [Install prerequisites] ************************************************************************************************************************
+2022-11-26 20:54:38,285 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=aptitude)
+2022-11-26 20:54:38,302 p=16045 u=ubuntu n=ansible | TASK [Install latest version of Apache] *************************************************************************************************************
+2022-11-26 20:54:40,467 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:40,483 p=16045 u=ubuntu n=ansible | TASK [Change file ownership, group and permissions] *************************************************************************************************
+2022-11-26 20:54:40,962 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:40,979 p=16045 u=ubuntu n=ansible | TASK [Copy index file] ******************************************************************************************************************************
+2022-11-26 20:54:41,761 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:41,777 p=16045 u=ubuntu n=ansible | TASK [Set up Apache virtualhost] ********************************************************************************************************************
+2022-11-26 20:54:42,350 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:42,367 p=16045 u=ubuntu n=ansible | TASK [Enable new site] ******************************************************************************************************************************
+2022-11-26 20:54:42,975 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:54:42,991 p=16045 u=ubuntu n=ansible | TASK [Disable default Apache site] ******************************************************************************************************************
+2022-11-26 20:54:43,344 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:54:43,361 p=16045 u=ubuntu n=ansible | RUNNING HANDLER [Reload Apache] *********************************************************************************************************************
+2022-11-26 20:54:44,396 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:54:44,416 p=16045 u=ubuntu n=ansible | PLAY [instal Mysql& git] ****************************************************************************************************************************
+2022-11-26 20:54:44,430 p=16045 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:54:45,553 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:45,581 p=16045 u=ubuntu n=ansible | TASK [Installing Mysql  and dependencies] ***********************************************************************************************************
+2022-11-26 20:54:47,680 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=mysql-server)
+2022-11-26 20:54:49,699 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=mysql-client)
+2022-11-26 20:54:51,776 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=python3-mysqldb)
+2022-11-26 20:54:53,811 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101] => (item=libmysqlclient-dev)
+2022-11-26 20:54:53,828 p=16045 u=ubuntu n=ansible | TASK [start and enable mysql service] ***************************************************************************************************************
+2022-11-26 20:54:54,339 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:54,355 p=16045 u=ubuntu n=ansible | TASK [creating mysql user (temi)] *******************************************************************************************************************
+2022-11-26 20:54:55,306 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:54:55,322 p=16045 u=ubuntu n=ansible | TASK [creating metiko_db] ***************************************************************************************************************************
+2022-11-26 20:54:55,828 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:55,844 p=16045 u=ubuntu n=ansible | TASK [Enable remote login to mysql] *****************************************************************************************************************
+2022-11-26 20:54:56,314 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:56,344 p=16045 u=ubuntu n=ansible | PLAY [PHP & other denpendencies] ********************************************************************************************************************
+2022-11-26 20:54:56,380 p=16045 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:54:57,395 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:57,421 p=16045 u=ubuntu n=ansible | TASK [Install git & others] *************************************************************************************************************************
+2022-11-26 20:54:58,512 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:54:58,527 p=16045 u=ubuntu n=ansible | TASK [Install Software properties] ******************************************************************************************************************
+2022-11-26 20:55:00,482 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:00,498 p=16045 u=ubuntu n=ansible | TASK [Add Apt Repo for PHP] *************************************************************************************************************************
+2022-11-26 20:55:10,135 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:10,150 p=16045 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:55:12,466 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:12,482 p=16045 u=ubuntu n=ansible | TASK [Install PHP] **********************************************************************************************************************************
+2022-11-26 20:55:13,987 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:14,002 p=16045 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:55:15,890 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:15,905 p=16045 u=ubuntu n=ansible | TASK [Install PHP 8.1 and it's libraries] ***********************************************************************************************************
+2022-11-26 20:55:17,077 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:55:17,093 p=16045 u=ubuntu n=ansible | TASK [Update "apt"] *********************************************************************************************************************************
+2022-11-26 20:55:19,323 p=16045 u=ubuntu n=ansible | changed: [44.201.208.101]
+2022-11-26 20:55:19,352 p=16045 u=ubuntu n=ansible | PLAY [all] ******************************************************************************************************************************************
+2022-11-26 20:55:19,366 p=16045 u=ubuntu n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2022-11-26 20:55:20,432 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:55:20,459 p=16045 u=ubuntu n=ansible | TASK [Change the project directory and install Composer] ********************************************************************************************
+2022-11-26 20:55:20,768 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:55:20,784 p=16045 u=ubuntu n=ansible | TASK [Make composer executable by user] *************************************************************************************************************
+2022-11-26 20:55:21,138 p=16045 u=ubuntu n=ansible | ok: [44.201.208.101]
+2022-11-26 20:55:21,155 p=16045 u=ubuntu n=ansible | TASK [Clone laravel & run composer] *****************************************************************************************************************
+2022-11-26 20:55:22,322 p=16045 u=ubuntu n=ansible | fatal: [44.201.208.101]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin 'https://github.com/laravel/laravel.git .' /var/www/html/tmetiko", "msg": "fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory.", "rc": 128, "stderr": "fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory.\n", "stderr_lines": ["fatal: destination path '/var/www/html/tmetiko' already exists and is not an empty directory."], "stdout": "", "stdout_lines": []}
+2022-11-26 20:55:22,323 p=16045 u=ubuntu n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2022-11-26 20:55:22,324 p=16045 u=ubuntu n=ansible | 44.201.208.101             : ok=27   changed=10   unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-11-26 21:26:48,814 p=16476 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 203, column 21, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        working_dir: "/var/www/html/{{ http_host }}/laravel
+      remote_user: "{{ app_user }}"
+                    ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-11-26 21:35:03,017 p=16495 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 199, column 29, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name:  create laravel directory
+        ansible.builtin.file:
+                            ^ here
+
+2022-11-26 21:43:30,125 p=16589 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 215, column 26, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        content: |
+          APP_NAME="temi's Laravel App"
+                         ^ here
+
+2022-11-26 21:56:54,631 p=16623 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 215, column 27, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        content: |
+          APP_NAME= "temi's Laravel App"
+                          ^ here
+
+2022-11-26 22:04:27,634 p=16638 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 324, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-26 22:13:24,837 p=16734 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 324, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-26 22:15:35,645 p=16745 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 324, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-26 22:30:24,946 p=16776 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 324, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-26 22:33:59,044 p=16786 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 325, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-26 22:34:59,714 p=16792 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 325, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  #      name: "apache2"
+   #     state: started
+^ here
+
+2022-11-26 22:36:02,169 p=16801 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 325, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  #      name: "apache2"
+   #     state: started
+^ here
+
+2022-11-26 22:41:45,848 p=16945 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 325, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#      name: "apache2"
+#     state: started
+^ here
+
+2022-11-26 22:43:13,976 p=16953 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 313, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        chdir: /usr/bin/
+        creates: certbot
+^ here
+
+2022-11-26 22:44:42,642 p=16959 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 313, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#        chdir: /usr/bin/
+#        creates: certbot
+^ here
+
+2022-11-26 22:47:03,451 p=16971 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 306, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: certbot
+        classic: true
+^ here
+
+2022-11-26 22:50:05,998 p=17444 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 306, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: certbot
+        classic: true
+^ here
+
+2022-11-26 22:54:45,683 p=17456 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 301, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: Refreshing Core
+      command: snap refresh core
+^ here
+
+2022-11-26 22:56:14,732 p=17465 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 289, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: Script to install PostgreSQL
+      ansible.builtin.script: psql.sh
+^ here
+
+2022-11-26 22:57:32,249 p=17473 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 281, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      timezone:
+        name: Nigeria/Lagos
+^ here
+
+2022-11-26 22:58:54,032 p=17479 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 277, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        cmd: php artisan key:generate
+        chdir: "/var/www/html/{{ http_host }}/laravel
+^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-11-26 23:00:21,788 p=17486 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 277, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#        cmd: php artisan key:generate
+#        chdir: "/var/www/html/{{ http_host }}/laravel
+^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-11-27 18:53:59,791 p=24456 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 277, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#        cmd: php artisan key:generate
+#        chdir: "/var/www/html/{{ http_host }}/laravel
+^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-11-27 18:59:04,790 p=24471 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 318, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-27 19:09:02,589 p=24493 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 322, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: "apache2"
+        state: started
+^ here
+
+2022-11-27 19:49:55,500 p=24718 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 2 column 1 (char 1)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/ubuntu/at/playbook.yml': line 139, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#      apt:
+        update_cache: true
+        ^ here
+
